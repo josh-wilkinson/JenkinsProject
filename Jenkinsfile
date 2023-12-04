@@ -10,7 +10,7 @@ pipeline {
 
             steps {
                 echo 'building the application'
-                bat 'ls -l'
+                bat 'dir'
                 //bat 'mvn -X clean compile'
             }
 
