@@ -9,26 +9,9 @@ pipeline {
         stage ('Build') {
 
             steps {
+                bat 'mvn --version'
                 echo 'building the application'
-                //bat 'cd src/main/java && dir'
                 bat 'mvn clean package'
-                //bat 'mvn --version'
-            }
-
-        }
-
-        stage ('Test') {
-            steps {
-                echo 'testing the application'
-                //bat 'mvn test'
-            }
-
-        }
-
-        stage ('Deploy') {
-            steps {
-                echo 'deploying the applicaton'
-                //bat 'mvn deploy'
             }
 
         }
