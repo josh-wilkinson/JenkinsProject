@@ -1,5 +1,6 @@
+import org.testng.annotations.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
 
 /**
  * Created by meudecc on 15/02/2017.
