@@ -11,7 +11,7 @@ pipeline {
             steps {
                 bat 'mvn --version'
                 echo 'building the application'
-                bat 'mvn clean compile'
+                bat 'mvn -B -DskipTests clean package'
             }
 
         }
@@ -21,6 +21,11 @@ pipeline {
             steps {
                 echo 'testing the application'
                 bat 'mvn test'
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
             }
 
         }
