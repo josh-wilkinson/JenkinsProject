@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage ('build') {
+        stage ('Build') {
             //when { changeset "src/*.java" }
             steps {
                 echo 'building the application'
@@ -15,7 +15,7 @@ pipeline {
 
         }
 
-        stage ('test') {
+        stage ('Test') {
             steps {
                 echo 'testing the application'
                 //bat 'mvn test'
@@ -23,7 +23,7 @@ pipeline {
 
         }
 
-        stage ('deploy') {
+        stage ('Deploy') {
             steps {
                 echo 'deploying the applicaton'
                 //bat 'mvn deploy'
