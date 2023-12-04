@@ -10,7 +10,9 @@ pipeline {
 
             steps {
                 echo 'building the application'
-                bat 'mvn clean compile'
+                withMaven(maven : 'maven_3_9_6') {
+                    bat 'mvn clean compile'
+                }
             }
 
         }
