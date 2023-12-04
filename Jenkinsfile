@@ -10,7 +10,7 @@ pipeline {
 
             steps {
                 echo 'building the application'
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
 
         }
@@ -18,7 +18,7 @@ pipeline {
         stage ('test') {
             steps {
                 echo 'testing the application'
-                sh 'mvn test'
+                bat 'mvn test'
             }
 
         }
@@ -26,7 +26,7 @@ pipeline {
         stage ('deploy') {
             steps {
                 echo 'deploying the applicaton'
-                sh 'mvn deploy'
+                bat 'mvn deploy'
             }
 
         }
