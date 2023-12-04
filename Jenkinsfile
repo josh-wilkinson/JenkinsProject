@@ -10,7 +10,7 @@ pipeline {
 
             steps {
                 echo 'building the application'
-                bat 'cd src/main && dir'
+                bat 'cd src/main/java && dir'
                 //bat 'mvn -X clean compile'
             }
 
