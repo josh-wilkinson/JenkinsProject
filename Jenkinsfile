@@ -7,7 +7,7 @@ pipeline {
 
     stages {
         stage ('build') {
-
+            when { changeset "src/*" }
             steps {
                 echo 'building the application'
                 bat 'mvn --version'
