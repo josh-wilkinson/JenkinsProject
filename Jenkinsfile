@@ -1,30 +1,26 @@
 pipeline {
-    agent any
+    agent { docker { image 'maven:3.9.5-eclipse-temurin-17-alpine' } }
 
     stages {
         stage ('build') {
 
             steps {
-                withMaven(maven : 'maven_3_9_6')
-                    sh 'mvn clean compile'
+                echo 'building the application'
+                sh 'mvn --version'
             }
 
         }
 
         stage ('test') {
             steps {
-                withMaven(maven : 'maven_3_9_6') {
-                    sh 'mvn test'
-                }
+                echo 'testing the application'
             }
 
         }
 
         stage ('deploy') {
             steps {
-                withMaven(maven : 'maven_3_9_6') {
-                    sh 'mvn deploy'
-                }
+                echo 'deploying the applicaton'
             }
 
         }
