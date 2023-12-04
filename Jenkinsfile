@@ -9,7 +9,7 @@ pipeline {
         stage ('Build') {
 
             steps {
-                echo 'building the
+                echo 'building the application'
                 bat 'ls -l'
                 //bat 'mvn -X clean compile'
             }
