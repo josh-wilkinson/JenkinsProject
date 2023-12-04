@@ -7,10 +7,10 @@ pipeline {
 
     stages {
         stage ('Build') {
-            //when { changeset "src/*.java" }
+
             steps {
                 echo 'building the application'
-                bat 'mvn -Dmaven.test.failure.ignore=true clean package'
+                bat 'mvn -B -DskipTests clean package'
             }
 
         }
