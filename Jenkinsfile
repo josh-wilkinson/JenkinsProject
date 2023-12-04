@@ -11,8 +11,8 @@ pipeline {
             steps {
                 echo 'building the application'
                 //bat 'cd src/main/java && dir'
-                //bat 'mvn clean package'
-                bat 'mvn --version'
+                bat 'mvn clean package'
+                //bat 'mvn --version'
             }
 
         }
