@@ -10,7 +10,7 @@ pipeline {
             //when { changeset "src/*.java" }
             steps {
                 echo 'building the application'
-                bat 'mvn --version'
+                bat 'mvn -B -DskipTests clean package'
             }
 
         }
