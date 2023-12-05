@@ -21,7 +21,6 @@ pipeline {
             steps {
                 echo 'testing the application'
                 bat 'mvn test'
-                junit 'target/surefire-reports/TEST-StudentTest.xml'
             }
 
         }
