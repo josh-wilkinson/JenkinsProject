@@ -35,6 +35,9 @@
                         <version>1.0.0-M3</version>
                     </dependency>
                 </dependencies>
+                <configuration>
+                    <test>StudentTest.java</test>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -48,8 +51,8 @@
         </dependency>
         <dependency>
             <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-runner</artifactId>
-            <version>${junit.platform.version}</version>
+            <artifactId>junit-platform-suite-engine</artifactId>
+            <version>1.9.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
