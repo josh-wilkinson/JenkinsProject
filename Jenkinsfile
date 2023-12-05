@@ -23,7 +23,7 @@ pipeline {
                 bat 'mvn test'
             }
             post {
-                junit 'target/surefire-reports/*.xml'
+                junit 'target/surefire-reports/TEST-StudentTest.xml'
             }
 
         }
